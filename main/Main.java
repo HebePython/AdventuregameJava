@@ -17,6 +17,8 @@ public class Main {
         System.out.println(zone1.getZoneName());
         zone1.displayCurrentZone();
         zone2.displayCurrentZone();
+
+        zone1.takeRest();
     }
     
 }
