@@ -4,20 +4,23 @@ import main.Slowprint;
 
 public class World {
     public Slowprint slowprint = new Slowprint();
-    private final String ZONE_NAME;
-    private final String DESCRIPTION;
-    private final String[] DIRECTIONS;
+    private final String ZONE_NAME; // name of the zone
+    private final String DESCRIPTION; // describes the zone
+    private final String[] DIRECTIONS; // gives the directions you can go
+    private final String[] EVENTS; // IDK what this is for
 
-    public World(String zoneName, String description, String[] directions) {
+    public World(String zoneName, String description, String[] directions, String[] events) {
         this.ZONE_NAME = zoneName;
         this.DESCRIPTION = description;
         this.DIRECTIONS = directions;
+        this.EVENTS = new String[]{"Default"};
     }
 
     public World() {
         this.ZONE_NAME = "Default";
         this.DESCRIPTION = "Default";
         this.DIRECTIONS = new String[]{"Default"};
+        this.EVENTS = new String[]{"Default"};
     }
     public String getZoneName() {
         return ZONE_NAME;
@@ -35,10 +38,9 @@ public class World {
         }
     }
 
-    public class Zone5 extends World {
-        public Zone5() {
-            super("Cave", "A dark and damp cave filled with bats and echoes", new String[]{"Foward", "Backward"});
+    public void displayEvents() {
+        for (String event : EVENTS) {
+            slowprint.slowPrint(event);
         }
     }
-
 }
