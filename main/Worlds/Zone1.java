@@ -2,7 +2,7 @@ package main.Worlds;
 
 public class Zone1 extends World {
     public Zone1() {
-        super("Tavern", "A bright roadside tavern full of laughter and patrons.", new String[]{"To Forest"});
+        super("Tavern", "A bright roadside tavern full of laughter and patrons.", new String[]{"To Forest", "Downstairs"});
     }
 
     public void takeRest() {
