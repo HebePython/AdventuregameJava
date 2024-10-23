@@ -14,6 +14,11 @@ public class World {
         this.DIRECTIONS = directions;
     }
 
+    public World() {
+        this.ZONE_NAME = "Default";
+        this.DESCRIPTION = "Default";
+        this.DIRECTIONS = new String[]{"Default"};
+    }
     public String getZoneName() {
         return ZONE_NAME;
     }
